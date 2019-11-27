@@ -1,0 +1,50 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install
+  become: yes
+  stat:
+    path: '{{ kubebuilder_install_dir }}'
+  changed_when: False
+  register: kubebuilder_binary
+- when: not kubebuilder_binary.stat.exists
+  block:
+    - name: download
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ kubebuilder_url }}'
+        dest: /tmp/{{ kubebuilder_tgz }}
+        mode: 0644
+        checksum: '{{ kubebuilder_checksum }}'
+    - name: unarchive
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ kubebuilder_tgz }}
+        dest: '{{ kubebuilder_parent_install_dir }}'
+        creates: '{{ kubebuilder_install_dir }}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ kubebuilder_tgz }}
+        state: absent
+- name: links
+  become: yes
+  become_user: root
+  with_items: '{{ kubebuilder_links }}'
+  file:
+    src: '{{ kubebuilder_install_dir }}/bin/{{ item }}'
+    dest: '{{ kubebuilder_parent_install_dir }}/bin/{{ item }}'
+    state: link

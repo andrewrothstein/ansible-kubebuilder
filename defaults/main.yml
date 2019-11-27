@@ -1,0 +1,24 @@
+---
+# defaults file for kubebuilder
+kubebuilder_ver: '2.2.0'
+kubebuilder_mirror: https://github.com/kubernetes-sigs/kubebuilder/releases/download
+kubebuilder_os: linux
+kubebuilder_arch: amd64
+kubebuilder_parent_install_dir: /usr/local
+kubebuilder_links:
+  - etcd
+  - kube-apiserver
+  - kubebuilder
+  - kubectl
+
+kubebuilder_checksums:
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/checksums.txt
+  '2.2.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_darwin_amd64.tar.gz
+    darwin_amd64: sha256:5ccb9803d391e819b606b0c702610093619ad08e429ae34401b3e4d448dd2553
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_amd64.tar.gz
+    linux_amd64: sha256:9ef35a4a4e92408f7606f1dd1e68fe986fa222a88d34e40ecc07b6ffffcc8c12
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_arm64.tar.gz
+    linux_arm64: sha256:edd9450184f173f009305b22663fd1d62966d15be93eb338a3898e381e80c310
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_ppc64le.tar.gz
+    linux_ppc64le: sha256:8ed9451f32c0e7dbef37e24d38e21f6a37b0830b39ecb12ca574bb2b42e1abb5
