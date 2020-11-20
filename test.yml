@@ -4,3 +4,8 @@
   - role: '{{ playbook_dir }}'
     kubebuilder_links:
       - kubebuilder
+  tasks:
+  - command: kubebuilder version
+    register: kubebuilder_test_output
+  - debug:
+      msg: '{{ kubebuilder_test_output.stdout }}'
