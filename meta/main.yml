@@ -15,20 +15,22 @@ galaxy_info:
         - all
     - name: Debian
       versions:
+        - bullseye
         - buster
         - stretch
     - name: EL
       versions:
-        - all
+        - 7
+        - 8
     - name: Fedora
       versions:
-        - all
-    - name: Gentoo
-      versions:
-        - all
+        - 31
+        - 32
     - name: Ubuntu
       versions:
-        - all
+        - bionic
+        - focal
+        - xenial
   galaxy_tags:
     - development
   role_name: kubebuilder
