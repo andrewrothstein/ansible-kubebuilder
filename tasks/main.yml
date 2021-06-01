@@ -9,42 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install in {{ kubebuilder_install_dir }}
-  become: yes
-  stat:
-    path: '{{ kubebuilder_install_dir }}'
-  changed_when: False
-  register: kubebuilder_binary
-- when: not kubebuilder_binary.stat.exists
-  block:
-    - name: downloading {{ kubebuilder_url }}
-      become: yes
-      become_user: root
-      get_url:
-        url: '{{ kubebuilder_url }}'
-        dest: '{{ kubebuilder_tmp_tgz }}'
-        mode: 0644
-        checksum: '{{ kubebuilder_checksum }}'
-    - name: unarchiving {{ kubebuilder_tmp_tgz }}
-      become: yes
-      become_user: root
-      unarchive:
-        remote_src: yes
-        src: '{{ kubebuilder_tmp_tgz }}'
-        dest: '{{ kubebuilder_parent_install_dir }}'
-        creates: '{{ kubebuilder_install_dir }}'
-  always:
-    - name: rm {{ kubebuilder_tmp_tgz }}
-      become: yes
-      become_user: root
-      file:
-        path: '{{ kubebuilder_tmp_tgz }}'
-        state: absent
-- name: linking to executables in {{ kubebuilder_install_bin_dir }} from {{ kubebuilder_parent_install_bin_dir }}
+- name: downloading {{ kubebuilder_url }} to {{ kubebuilder_install_exe }}
   become: yes
   become_user: root
-  with_items: '{{ kubebuilder_links }}'
+  get_url:
+    url: '{{ kubebuilder_url }}'
+    dest: '{{ kubebuilder_install_exe }}'
+    mode: 0755
+    checksum: '{{ kubebuilder_checksum }}'
+- name: linking {{ kubebuilder_install_exe }} from {{ kubebuilder_link }}
+  become: yes
+  become_user: root
   file:
-    src: '{{ kubebuilder_install_bin_dir }}/{{ item }}'
-    dest: '{{ kubebuilder_parent_install_bin_dir }}/{{ item }}'
+    src: '{{ kubebuilder_install_exe }}'
+    dest: '{{ kubebuilder_link }}'
     state: link

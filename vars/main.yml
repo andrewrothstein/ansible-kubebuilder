@@ -1,11 +1,7 @@
 ---
 # vars file for kubebuilder
 kubebuilder_platform: '{{ kubebuilder_os }}_{{ kubebuilder_arch }}'
-kubebuilder_name: kubebuilder_{{ kubebuilder_ver }}_{{ kubebuilder_platform }}
-kubebuilder_tgz: '{{ kubebuilder_name }}.tar.gz'
-kubebuilder_tmp_tgz: /tmp/{{ kubebuilder_tgz }}
-kubebuilder_url: '{{ kubebuilder_mirror }}/v{{ kubebuilder_ver }}/{{ kubebuilder_tgz }}'
+kubebuilder_url: '{{ kubebuilder_mirror }}/v{{ kubebuilder_ver }}/kubebuilder_{{ kubebuilder_platform }}'
 kubebuilder_checksum: '{{ kubebuilder_checksums[kubebuilder_ver][kubebuilder_platform] }}'
-kubebuilder_install_dir: '{{ kubebuilder_parent_install_dir }}/{{ kubebuilder_name }}'
-kubebuilder_install_bin_dir: '{{ kubebuilder_install_dir }}/bin'
-kubebuilder_parent_install_bin_dir: '{{ kubebuilder_parent_install_dir }}/bin'
+kubebuilder_install_exe: '{{ kubebuilder_install_dir }}/kubebuilder_{{ kubebuilder_ver }}_{{ kubebuilder_platform }}'
+kubebuilder_link: '{{ kubebuilder_install_dir }}/kubebuilder'

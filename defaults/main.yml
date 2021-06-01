@@ -1,44 +1,19 @@
 ---
 # defaults file for kubebuilder
-kubebuilder_ver: 2.3.2
+kubebuilder_ver: 3.1.0
 kubebuilder_mirror: https://github.com/kubernetes-sigs/kubebuilder/releases/download
 kubebuilder_os: linux
 kubebuilder_arch: amd64
-kubebuilder_parent_install_dir: /usr/local
-kubebuilder_links:
-  - etcd
-  - kube-apiserver
-  - kubebuilder
-  - kubectl
+kubebuilder_install_dir: /usr/local/bin
 
 kubebuilder_checksums:
-  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/checksums.txt
-  '2.2.0':
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_darwin_amd64.tar.gz
-    darwin_amd64: sha256:5ccb9803d391e819b606b0c702610093619ad08e429ae34401b3e4d448dd2553
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_amd64.tar.gz
-    linux_amd64: sha256:9ef35a4a4e92408f7606f1dd1e68fe986fa222a88d34e40ecc07b6ffffcc8c12
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_arm64.tar.gz
-    linux_arm64: sha256:edd9450184f173f009305b22663fd1d62966d15be93eb338a3898e381e80c310
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.2.0/kubebuilder_2.2.0_linux_ppc64le.tar.gz
-    linux_ppc64le: sha256:8ed9451f32c0e7dbef37e24d38e21f6a37b0830b39ecb12ca574bb2b42e1abb5
-  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/checksums.txt
-  '2.3.1':
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_darwin_amd64.tar.gz
-    darwin_amd64: sha256:39314d45053b6c31eb17e35c9b8d923f8a38277a9a136448345dd4b7f0f308f4
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_amd64.tar.gz
-    linux_amd64: sha256:ff496970f209706763f2aba2bdcefc2de8d00085b3b972b5790117b59ea4ed10
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_arm64.tar.gz
-    linux_arm64: sha256:153ff1bc656820917fe5b3eb393bf7b607e04c299f8602817f8088040ecffb40
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_ppc64le.tar.gz
-    linux_ppc64le: sha256:25c684402841cbb1d87daf05d2c5d76a16e9f8d3c2ad949a439dd947b5e52150
-  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.2/checksums.txt
-  '2.3.2':
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.2/kubebuilder_2.3.2_darwin_amd64.tar.gz
-    darwin_amd64: sha256:7e7dc6f5b106909a13a24beea73427940a6ed81a8dea66d65b185dc2c71dcc28
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.2/kubebuilder_2.3.2_linux_amd64.tar.gz
-    linux_amd64: sha256:c65b86f497726fcb8b887d55c10a68e38a503aa736c0d02b2cce11df267ad91d
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.2/kubebuilder_2.3.2_linux_arm64.tar.gz
-    linux_arm64: sha256:fcd59b1c3a91875ec3c0503a37c3d7e72ee378bf470acba1b5be25e8e6822bac
-    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.2/kubebuilder_2.3.2_linux_ppc64le.tar.gz
-    linux_ppc64le: sha256:486aec806b9c89b1ce3f71c4efa6b59d7a959628464877d488cb7a1cbb41f720
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/checksums.txt
+  '3.1.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/kubebuilder_darwin_amd64
+    darwin_amd64: sha256:2a6c5e0e276b65cfbe173fca07b318ecff1752bf947002641b808c4a40187f2c
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/kubebuilder_linux_amd64
+    linux_amd64: sha256:a4af6a2110cf506855cdc86d0291c6e76203ae9fb3c918f7fdc05e7962e4b488
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/kubebuilder_linux_arm64
+    linux_arm64: sha256:017ec01bb20535bd22f1e75218d4effffea5457a2378886981ff4f986b05eb31
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/kubebuilder_linux_ppc64le
+    linux_ppc64le: sha256:2f4f2c5477aa6417f9785e8aa9655ed69f7eb7444d5395c020896c3d764f070d

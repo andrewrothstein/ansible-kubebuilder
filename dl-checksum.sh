@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-#set -x
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/kubernetes-sigs/kubebuilder/releases/download
 APP=kubebuilder
@@ -10,9 +10,8 @@ dl()
     local lchecksums=$2
     local os=$3
     local arch=$4
-    local archive_type=${5:-tar.gz}
     local platform="${os}_${arch}"
-    local file=${APP}_${ver}_${platform}.${archive_type}
+    local file=${APP}_${platform}
     local url=$MIRROR/v$ver/$file
     printf "    # %s\n" $url
     printf "    %s: sha256:%s\n" $platform `fgrep $file $lchecksums | awk '{print $1}'`
@@ -37,4 +36,4 @@ dl_ver()
     dl $ver $lchecksums linux ppc64le
 }
 
-dl_ver ${1:-2.3.2}
+dl_ver ${1:-3.1.0}
