@@ -1,6 +1,6 @@
 andrewrothstein.kubebuilder
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-kubebuilder.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-kubebuilder)
+![Build Status](https://github.com/andrewrothstein/ansible-kubebuilder/actions/workflows/build.yml/badge.svg)
 
 Installs [kubebuilder](https://book.kubebuilder.io/)
 
