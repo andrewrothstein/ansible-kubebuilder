@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: downloading {{ kubebuilder_url }} to {{ kubebuilder_install_exe }}
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ kubebuilder_url }}'
@@ -18,7 +18,7 @@
     mode: 0755
     checksum: '{{ kubebuilder_checksum }}'
 - name: linking {{ kubebuilder_install_exe }} from {{ kubebuilder_link }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ kubebuilder_install_exe }}'
