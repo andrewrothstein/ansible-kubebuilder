@@ -1,6 +1,6 @@
 ---
 # defaults file for kubebuilder
-kubebuilder_ver: 3.1.0
+kubebuilder_ver: 3.2.0
 kubebuilder_mirror: https://github.com/kubernetes-sigs/kubebuilder/releases/download
 kubebuilder_os: linux
 kubebuilder_arch: amd64
@@ -17,3 +17,13 @@ kubebuilder_checksums:
     linux_arm64: sha256:017ec01bb20535bd22f1e75218d4effffea5457a2378886981ff4f986b05eb31
     # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.1.0/kubebuilder_linux_ppc64le
     linux_ppc64le: sha256:2f4f2c5477aa6417f9785e8aa9655ed69f7eb7444d5395c020896c3d764f070d
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.2.0/checksums.txt
+  '3.2.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.2.0/kubebuilder_darwin_amd64
+    darwin_amd64: sha256:871a0f21af99d895ef534fb11704eb0e4a1f8b55df58906f625702faa65f64e6
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.2.0/kubebuilder_linux_amd64
+    linux_amd64: sha256:102bb0f586dcb50951aded67856483a2ee114057c56475b3cda6051a12832a72
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.2.0/kubebuilder_linux_arm64
+    linux_arm64: sha256:0a340ea925c801aa71344becdefce96eda6fa0bc92352b9c7bcb36a4f8c56314
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v3.2.0/kubebuilder_linux_ppc64le
+    linux_ppc64le: sha256:74473d094908caad852a77088f64bb64eb4c79497f6695eb5e9e8bc4bacd9409
