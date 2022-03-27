@@ -14,7 +14,7 @@ dl()
     local file=${APP}_${platform}
     local url=$MIRROR/v$ver/$file
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform `fgrep $file $lchecksums | awk '{print $1}'`
+    printf "    %s: sha256:%s\n" $platform $(fgrep $file $lchecksums | awk '{print $1}')
 }
 
 dl_ver()
@@ -24,7 +24,7 @@ dl_ver()
     local rchecksums=$MIRROR/v$ver/checksums.txt
     if [ ! -e $lchecksums ];
     then
-        wget -q -O $lchecksums $rchecksums
+        curl -sSLf -o $lchecksums $rchecksums
     fi
 
     printf "  # %s\n" $rchecksums
@@ -36,4 +36,4 @@ dl_ver()
     dl $ver $lchecksums linux ppc64le
 }
 
-dl_ver ${1:-3.2.0}
+dl_ver ${1:-3.3.0}
