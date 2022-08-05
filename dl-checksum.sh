@@ -36,4 +36,4 @@ dl_ver()
     dl $ver $lchecksums linux ppc64le
 }
 
-dl_ver ${1:-3.5.0}
+dl_ver ${1:-3.6.0}
