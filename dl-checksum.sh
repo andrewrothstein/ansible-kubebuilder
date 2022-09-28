@@ -31,9 +31,10 @@ dl_ver()
     printf "  '%s':\n" $ver
 
     dl $ver $lchecksums darwin amd64
+    dl $ver $lchecksums darwin arm64
     dl $ver $lchecksums linux amd64
     dl $ver $lchecksums linux arm64
     dl $ver $lchecksums linux ppc64le
 }
 
-dl_ver ${1:-3.6.0}
+dl_ver ${1:-3.7.0}

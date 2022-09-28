@@ -1,5 +1,7 @@
 ---
 # vars file for kubebuilder
+kubebuilder_os: '{{ ansible_system | lower }}'
+kubebuilder_arch: '{{ kubebuilder_arch_map[ansible_architecture] }}'
 kubebuilder_platform: '{{ kubebuilder_os }}_{{ kubebuilder_arch }}'
 kubebuilder_url: '{{ kubebuilder_mirror }}/v{{ kubebuilder_ver }}/kubebuilder_{{ kubebuilder_platform }}'
 kubebuilder_checksum: '{{ kubebuilder_checksums[kubebuilder_ver][kubebuilder_platform] }}'
