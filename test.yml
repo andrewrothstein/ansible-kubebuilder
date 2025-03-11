@@ -1,11 +1,17 @@
 ---
-- hosts: all
-  roles:
-  - role: '{{ playbook_dir }}'
-    kubebuilder_links:
-      - kubebuilder
+- name: Testing andrewrothstein.kubebuilder
+  hosts: all
   tasks:
-  - command: kubebuilder version
-    register: kubebuilder_test_output
-  - debug:
-      msg: '{{ kubebuilder_test_output.stdout }}'
+    - name: Installing andrewrothstein.kubebuilder
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+      vars:
+        kubebuilder_links:
+          - kubebuilder
+    - name: Executing 'kubebuilder version'
+      ansible.builtin.command: kubebuilder version
+      changed_when: false
+      register: kubebuilder_test_output
+    - name: Output from 'kubebuilder version'
+      ansible.builtin.debug:
+        msg: '{{ kubebuilder_test_output.stdout }}'
