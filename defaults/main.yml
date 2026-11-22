@@ -1,6 +1,6 @@
 ---
 # defaults file for kubebuilder
-kubebuilder_ver: 4.13.1
+kubebuilder_ver: 4.16.0
 kubebuilder_mirror: https://github.com/kubernetes-sigs/kubebuilder/releases/download
 kubebuilder_arch_map:
   aarch64: arm64
@@ -512,3 +512,39 @@ kubebuilder_checksums:
     linux_arm64: sha256:7d39d8c2ed3f0bde122b5ba4ee5106d07da3a920b6865a8be4a56e689f8a0a56
     # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.13.1/kubebuilder_linux_ppc64le
     linux_ppc64le: sha256:81c7611149cd2e1b080aacf0f29fc874c1a1de5045dffc3119122b966836fd8d
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/checksums.txt
+  '4.14.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/kubebuilder_darwin_amd64
+    darwin_amd64: sha256:e8ccc09675edc396b7c0219e6ba1c4a9c9ea209932d57cdeb6f38599a81aff26
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/kubebuilder_darwin_arm64
+    darwin_arm64: sha256:0c1eb2ac13f49e42392e03924a51d8f780110874aa512bd1283f068ff1af3c41
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/kubebuilder_linux_amd64
+    linux_amd64: sha256:a433730088e4890b138c06e2362163cde459622b72eeccf61955f22de86fca86
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/kubebuilder_linux_arm64
+    linux_arm64: sha256:da3682be7262ce1b099f21c4de11e2b26abdf4ed73bc9c5cc074764484051299
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.14.0/kubebuilder_linux_ppc64le
+    linux_ppc64le: sha256:21f7c78862eca0f48f0fbd7c1f5b1c34f80558b2fcd9c94dbe4c675b51cf8d0a
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/checksums.txt
+  '4.15.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/kubebuilder_darwin_amd64
+    darwin_amd64: sha256:c1e2fd86b7e2e392cd26b77a72bb9665511435ecdeefb16712820ba5da3e666b
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/kubebuilder_darwin_arm64
+    darwin_arm64: sha256:8a8b2806c352f3e0749d315ecea91a352b2ce9321af927fca823a1604bd3530a
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/kubebuilder_linux_amd64
+    linux_amd64: sha256:9632ba818c35e10d9664f19090972ee5d667bdffbf4b83c34e8374c5e846afa2
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/kubebuilder_linux_arm64
+    linux_arm64: sha256:bd99723fc106502f64a3541b9c5b7079bc68961a76df4f465893e311b594d295
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.15.0/kubebuilder_linux_ppc64le
+    linux_ppc64le: sha256:020a76351435ed1a3b18def3e17b00e80302aecc93d831489800c9919d6102c3
+  # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/checksums.txt
+  '4.16.0':
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/kubebuilder_darwin_amd64
+    darwin_amd64: sha256:110d913c131d8eb41000b573d73e62c75777bbddeaea61626ed06d7fecad7ac7
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/kubebuilder_darwin_arm64
+    darwin_arm64: sha256:69f5e207cf35193c78546b0e6dccfc42c44b24ceba81d3e22bab453ae118c328
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/kubebuilder_linux_amd64
+    linux_amd64: sha256:539984e58832044f2326b1bb940c1eaf784f1849e65d06d3a4a4a8b5dfac7ca7
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/kubebuilder_linux_arm64
+    linux_arm64: sha256:6833432c8faab62d2ca6b583f32c88b0a3d1b7264562739c202084c996a55845
+    # https://github.com/kubernetes-sigs/kubebuilder/releases/download/v4.16.0/kubebuilder_linux_ppc64le
+    linux_ppc64le: sha256:8c74571f2d438b324a34ab217a46ee01e1c6770e25c55c211b073eaebe538e59
